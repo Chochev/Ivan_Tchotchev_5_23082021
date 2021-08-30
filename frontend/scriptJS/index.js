@@ -1,3 +1,4 @@
+
 const mainContainer = document.getElementById("mainContainer")
 
 const header =  document.createElement("header");
