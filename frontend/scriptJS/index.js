@@ -6,7 +6,7 @@ mainContainer.appendChild(header)
 header.innerHTML = `
 <header>
 <navbar>
-<img class="logo" src="../backend/images/logo.jpg"/>
+<img class="logo" src="./backend/images/logo.jpg"/>
 <ul>
 <li>Accueil</li>
 <li>Panier</li>
