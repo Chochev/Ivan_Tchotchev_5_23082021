@@ -1,19 +1,24 @@
-/* body{
-    margin: 0;
-    padding: 0;
-} */
+body {
+  margin: 0;
+  padding: 0;
+}
 
-.mainContainer {
+#mainContainer {
   display: flex;
-  margin: 20px;
+  padding: 10px;
+  
+  justify-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .logo {
-  height: 100%;
-  width: 200px;
+  display: flex;
+  width: 20%;
 }
 
 navbar {
   display: flex;
+width: 100%;
 
   background-color: rgba(243, 233, 241, 255);
   align-items: center;
@@ -28,16 +33,35 @@ li {
   list-style: none;
   font-size: 20px;
 }
-cards {
+
+.card {
+  margin: 10px;
+  width: 30%;
   display: flex;
-  flex-direction: row;
-  width: 100px;
+  flex-direction: column;
+ 
+  border: 5px solid rgb(223, 160, 160, 0.3);
 }
-p {
-  font-size: 25px;
+ .card img {
+  
+  width: 100%;
+  height: 300px;
+ object-fit: cover;
+}
+
+.cardDescription {
+  padding: 10px;
+}
+
+.ittemInfo {
+  font-size: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-img {
-  height: 200px;
-  width: 20%;
+.namePrice {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.namePrice h3 {
+  font-size: 15px;
 }
