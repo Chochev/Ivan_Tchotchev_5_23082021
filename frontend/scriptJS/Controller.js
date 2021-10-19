@@ -1,49 +1,69 @@
+
 class Controller{
+    //show the products in main page
     async showListOurson() { 
-         let listOurson =await Model.get(`http://localhost:3000/api/teddies`)
-         let view = new View
-          view.showListOurson(listOurson)
+      
+         let listOurson = await Model.get(`http://localhost:3000/api/teddies`)
+        
+         let view = new View();
+         view.showListOurson(listOurson)
         
      }
+    // show every product in the product page
+    async showOurson() {
+      
+        const searchEl = new URLSearchParams(location.search);
+      
+        const itemId = searchEl.get("_id");
+       
+        let item = await Model.get(`http://localhost:3000/api/teddies/${itemId}`);
+        
+        let view = new View
+        
+        view.showOurson(item)
+       
+    }
+     // add products in the basket with add btn
+  
+
+    async addToCart(item, specification) {
+        
+       
+       const resolvedItem = await Model.get(`http://localhost:3000/api/teddies/${item}`);
+    //debugger;
+        try {
+            const   panier = JSON.parse(localStorage.getItem("item")) || [];
+            localStorage.setItem("item", JSON.stringify([...panier, { ...resolvedItem, specification }] ))
+         //location.reload()
+        }catch (e) {
+        console.error(e);
+        }
+        //let view = new View
+        // view.addToCart(item)
+    }
+    
+    async displayPanier(panier) {
+        try {
+            panier = JSON.parse(localStorage.getItem("item"))|| [];
+        }catch (e) {
+            console.error(e);
+        }
+       let view = new View;
+       view.displayPanier(panier)
+    }
+
+    //clear basket function
+    async clearPanier(item) {
+       
+        localStorage.removeItem('item')
+        location.reload()
+    }
+
     
  }
 
 
- //take ittem id
-//  getNewId = new URLSearchParams(location.search);
-//   ittemId = getNewId.get("id");
-//  class Ourson{ 
-// async showOurson() {
-//      ittemUrl = await ModelIttem.get( `http://localhost:3000/api/teddies/${ittemId}`)
-//      let viewIMG = new ViewIMG
-//     viewIMG.showOurson(Ourson)
-    
-// }
-// }
 
+ 
 
-
-
-fetch(imageUrl)
-.then((response) => response.json())
-.then((data) => {
-    ittem = data;
-    addIttem(data);
-
-    function addIttem(ittem) {
-           
-            //  const card = document.getElementById("productImage");
-            card.innerHTML += `<div class=ittemImage>
-         <img src="${ittem.imageUrl}"  alt="${ittem.name}">
-         </div>
-         <div class = "namePrice">
-         <h3>${ittem.name} </h3>
-         <h3>${priceConvert(ittem.price)} </h3>
-         </div>
-         <div class="ittemInfo">
-                        <p>${ittem.description} </p>
-         </div>
-         `;
-       
-    }
-})
+ 

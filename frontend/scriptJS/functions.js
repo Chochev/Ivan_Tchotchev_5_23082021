@@ -1,5 +1,5 @@
  //price convert
- priceConvert = ittemPrice => {
+priceConvert = ittemPrice => {
     let price = `${ittemPrice}`;
     price = Intl.NumberFormat ("fr-FR", {
         style:"currency",
@@ -9,3 +9,5 @@
     return price;
     
 }
+
+  

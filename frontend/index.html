@@ -8,30 +8,33 @@
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="css/fontawesome.min.css" /> -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> -->
-    <script src="scriptJS/globalVar.js" async></script>
-    <script src="scriptJS/Model.js" async></script>
-    <script src="scriptJS/View.js" async></script>
-    <script src="scriptJS/Controller.js" async></script>
-    <script src="scriptJS/index.js" async></script>
-    <script src="scriptJS/functions.js" async></script>
-    <script src="scriptJS/ittemCards.js" async></script>
-    
-     
-    
   </head>
-  <body>
-    <header>
-      <navbar>
-        <img class="logo" src="./image/logo.jpg" />
-        <ul>
-          <li>Accueil</li>
-          <li>Panier</li>
-        </ul>
-      </navbar>
-    </header>
+    <body>
+      <header>
+        <navbar>
+          <img class="logo" src="./image/logo.jpg" />
+          <span class="badge"></span>
+          <ul>
+            <li><a href="index.html"> Accueil</a></li>
+            <li ><a href="panier.html">Panier  <p  id = "addItems"></p></a></li>
+          </ul>
+        </navbar>
+      </header>
     
-    <div id="mainContainer"></div>
+      <div id="mainContainer"></div>
+      <div id="oursonPreview"></div>
+
+
+      <script src="scriptJS/Model.js" ></script>
+      <script src="scriptJS/Controller.js" ></script>
+      <script src="scriptJS/router.js" ></script>
+      <script src="scriptJS/functions.js" ></script>
+      <script src="scriptJS/View.js" ></script>
+
    
-    
+      <script > 
+        Router.execute("showListOurson")
+      </script> 
+   
   </body>
 </html>

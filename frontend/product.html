@@ -8,32 +8,43 @@
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="css/fontawesome.min.css" /> -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> -->
-    <script src="scriptJS/globalVar.js" async></script> 
-    <script src="scriptJS/Model.js" async></script>
-    <script src="scriptJS/View.js" async></script>
-    <script src="scriptJS/Controller.js" async></script>
-    <script src="scriptJS/index.js" async></script>
-    <script src="scriptJS/functions.js" async></script>
-    <script src="scriptJS/ittemCards.js" async></script>
-   
-     
-  
     
   </head>
   <body>
+    <navbar>
+      <img class="logo" src="./image/logo.jpg" />
+      <ul>
+        <li><a href="index.html"> Accueil</a></li>
+        <li id="panierCalc"><a href="panier.html">Panier</a></li>
+      </ul>
+    </navbar>
+
+    <section id="productContainer" class="productEl">
+        <!-- <div class="optionControlers">
+            <button id="addItemBtn" class="addItemBtn" onclick="addToCart()">Ajouter au panier</button>
+            </div> -->
+            <!-- <div class="optionControlers"> -->
+                
+    </section>
+ 
+    <!-- </div> -->
    
-      <navbar>
-        <img class="logo" src="./image/logo.jpg" />
-        <ul>
-          <li> <a href="index.html"> Accueil</a> </li>
-          <li>Panier</li>
-        </ul>
-      </navbar>
     
-      <section class="productEl">
-<div id="productImage"></div>
-<div class="form"></div>
-      </section>
-      
+     <!-- <div id="oursonPreview"></div>    -->
+
+    
+ 
+    <script src="scriptJS/Controller.js" ></script>
+    <script src="scriptJS/Model.js" ></script>
+    <script src="scriptJS/router.js" ></script>
+    <script src="scriptJS/functions.js" ></script>
+    <script src="scriptJS/View.js" ></script>
+    
+
+   
+    <script > 
+        Router.execute("showOurson")    
+       
+    </script>
   </body>
 </html>

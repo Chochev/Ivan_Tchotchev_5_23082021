@@ -1,3 +1,5 @@
+
+//fetch url for all the ittems
 class Model {
     static get(url){
       return  fetch(url)
@@ -6,11 +8,3 @@ class Model {
     }
     
 }
-
-// class ModelIttem {
-//     static get(ittem){
-//         return fetch(ittemUrl)
-//         .then(res => {return res.json()})
-//     }
-// }
-
