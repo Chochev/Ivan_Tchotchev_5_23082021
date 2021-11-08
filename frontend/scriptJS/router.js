@@ -15,7 +15,9 @@ class Router {
             controller.displayPanier(item, param3)
         }
         else if(route == "clearPanier") {
-            controller.clexarPanier(item,param3)
+            controller.clearPanier(item,param3)
+        }else if(route == "displayOrder") {
+            controller.displayOrder()
         }
         else{
             console.log("error, la route n'existe pas")

@@ -1,93 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
- 
 
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <navbar>
-        <img class="logo" src="./image/logo.jpg" />
-        <ul>
-          <li><a href="index.html"> Accueil</a></li>
-          <li><a href="panier.html">Panier</a></li>
-        </ul>
+      <img class="logo" src="./image/logo.jpg" />
+      <ul>
+        <li><a href="index.html"> Accueil</a></li>
+        <li><a href="panier.html">Panier</a> <span id="counter"></span></li>
+       
+      </ul>
     </navbar>
 
-    <section id="productContainer" class="productEl">
-        <!-- <div class="optionControlers">
-            <button id="addItemBtn" class="addItemBtn" onclick="addToCart()">Ajouter au panier</button>
-            </div> -->
-            <!-- <div class="optionControlers"> -->
-                
-    </section>
-
-    <div id="oursonPreview"></div> 
- 
-    <a href="index.html"> <button id="returnToMain" class="returnToMain" type="submit" onclick="">Continuer vos achats</button> </a>
-  <!-- form  -->
-    <div class="formContainer">
-        <form action="" method="POST" id="loginForm" name="Form">
-        
-        
-            <div class="formLastName">
-                <label for="lastName">Nom :</label>
-                <input type="text" class="form-control"  id="lastName" name="lastName" placeholder="NOME"  required/>
-                <!-- <div class="error" id="lastNameErr"></div> -->
-            </div>
-        
-        
-            <div class="formFirstName">
-                <label for="firstName">Prénom :</label>
-                <input type="text" class="form-control"  id="firstName" name="firstName" placeholder="Prénom"  required/>
-                <!-- <div class="error"  id="firstNameErr"></div> -->
-            </div>
-        
-       
-            <div class="formAddress">
-                <label for="address">Adresse :</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="adresse"  required/>
-                <!-- <div class="error"  id="addressErr"></div> -->
-            </div>
-
-        
-            <div class="formCity">
-                <label for="city">Ville :</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="ville"  required/>
-                <!-- <div class="error"  id="cityErr"></div> -->
-            </div>
-        
-        
-            <div class="formMail">
-                <label for="email">Email :</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="name@mail.com"  required/>
-                <!-- <div class="error"  id="emailErr"></div> -->
-            </div>
-
-        
-            <div class="formButton">
-                <button type="submit" class="sendButton">Envoyer</button>
-            </div>
-        
-        </form>  
-    </div>
-     <!-- form  -->
-
-    <script src="scriptJS/View.js" ></script>
-    <script src="scriptJS/Controller.js" ></script>
-    <script src="scriptJS/Model.js" ></script>
-    <script src="scriptJS/router.js" ></script>
-    <script src="scriptJS/functions.js" ></script>
    
-    
-    <script > 
-       // Router.execute("addToCart")
-        Router.execute("displayPanier")
-    </script> 
 
-</body>
+    <div id="oursonPreview"></div>
+<div class="returnToMainBtn">
+    <a href="index.html">
+      <button id="returnToMain" class="returnToMain" type="submit" onclick="">
+        Continuer vos achats
+      </button>
+    </a>
+</div>
+
+    <!-- form  -->
+    <div class="formContainer">
+      <form
+        action="http://localhost:3000/api/teddies/order"
+        method="POST"
+        id="loginForm"
+        name="Form"
+        target="result"
+      >
+        <div class="formLastName">
+          <label for="lastName">Nom :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            name="lastName"
+            placeholder="NOME"
+            required
+          />
+          <small></small>
+          <!-- <div class="error" id="lastNameErr"></div> -->
+        </div>
+
+        <div class="formFirstName">
+          <label for="firstName">Prénom :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            placeholder="Prénom"
+            required
+          />
+          <small></small>
+          <!-- <div class="error"  id="firstNameErr"></div> -->
+        </div>
+
+        <div class="formAddress">
+          <label for="address">Adresse : </label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            placeholder="adresse"
+            required
+          />
+          <small></small>
+          <!-- <div class="error"  id="addressErr"></div> -->
+        </div>
+
+        <div class="formCity">
+          <label for="city">Ville :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            name="city"
+            placeholder="ville"
+            required
+          />
+          <small></small>
+          <!-- <div class="error"  id="cityErr"></div> -->
+        </div>
+
+        <div class="formMail">
+          <label for="email">Email :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="name@mail.com"
+            required
+          />
+          <small></small>
+          <!-- <div class="error"  id="emailErr"></div> -->
+        </div>
+
+        <div class="formButton">
+          <button type="submit" class="sendButton" id="sendButton">
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- form  -->
+    <section id="displayOrder" class="productEl"> </section>
+
+   
+
+    <script src="scriptJS/View.js"></script>
+    <script src="scriptJS/Controller.js"></script>
+    <script src="scriptJS/Model.js"></script>
+    <script src="scriptJS/router.js"></script>
+    <script src="scriptJS/functions.js"></script>
+
+    <script>
+      // Router.execute("addToCart")
+      Router.execute("displayPanier");
+    </script>
+   
+  </body>
 </html>

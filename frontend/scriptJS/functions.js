@@ -10,4 +10,3 @@ priceConvert = ittemPrice => {
     
 }
 
-  
