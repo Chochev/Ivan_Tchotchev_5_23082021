@@ -187,8 +187,7 @@ class View {
        // console.log("click");
       })
     );
-    // let counter = document.getElementById('counter');
-    // counter.innerHTML =`${panier.length}`;
+    
       
 
     //form validation
@@ -315,7 +314,7 @@ class View {
           validEmail(form.email)) ||
           true
           
-      ) {
+      ) { 
        // console.log("form valid");
         fetch("http://localhost:3000/api/teddies/order", {
           method: "POST",

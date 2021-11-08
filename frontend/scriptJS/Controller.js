@@ -5,7 +5,7 @@ class Controller{
     async showListOurson() { 
       
          let listOurson = await Model.get(`http://localhost:3000/api/teddies`)
-        
+   
          let view = new View();
          view.showListOurson(listOurson)
         
@@ -18,7 +18,7 @@ class Controller{
         const itemId = searchEl.get("_id");
        
         let item = await Model.get(`http://localhost:3000/api/teddies/${itemId}`);
-        
+       
         let view = new View
         
         view.showOurson(item)
@@ -32,7 +32,7 @@ class Controller{
        
        const resolvedItem = await Model.get(`http://localhost:3000/api/teddies/${oursonId}`);
     //debugger;
-    
+  
         try {
            
             let oursonTrouve = false;
@@ -79,6 +79,8 @@ class Controller{
     }
 
     displayOrder() {
+       
+        
         let view = new View
         try{
             let order = JSON.parse(localStorage.getItem("form")) || [];
@@ -89,9 +91,11 @@ class Controller{
             localStorage.removeItem('form');
         }catch (e) {
            // console.error(e);
+          
            view.displayOrder()
         }
        
+        
     }
     //clear basket function
   
