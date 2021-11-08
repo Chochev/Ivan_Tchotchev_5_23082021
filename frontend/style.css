@@ -19,7 +19,7 @@ body {
   cursor: pointer;
 }
 
-navbar {
+header{
   display: flex;
   width: 100%;
 
