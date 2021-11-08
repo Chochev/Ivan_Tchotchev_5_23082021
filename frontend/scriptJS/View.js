@@ -22,12 +22,6 @@ class View {
                         <p>${item.description} </p>
                     </div>
                    
-                    <div class="icon"> 
-                        <i class="fas fa-shopping-cart fa-2x">
-                            <a href="index.html?_id=${item.id}">
-                            </a>
-                        </i>
-                    </div>
                 </div>
             </div>
                 `;
