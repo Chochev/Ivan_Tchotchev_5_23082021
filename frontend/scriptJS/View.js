@@ -75,7 +75,7 @@ class View {
     let button = document.getElementById("addItemBtn");
     button.addEventListener("click", () => {
       this.clickOnAddToCart(item._id);
-      alert('vous avez ajouter de produit dans votre panier')
+      alert('Vous avez ajouté un produit à votre panier.')
       location.reload();
       document.location.href = "panier.html";
     });
@@ -346,13 +346,13 @@ class View {
     const info = document.getElementById("displayOrder");
     if(orderInfo != undefined){
       info.innerHTML += `
-      <p> Chere client : <span> ${orderInfo.contact.lastName + ' ' + orderInfo.contact.firstName} </span>, </br> 
-      Votre comande avec la référence : ${orderInfo.orderId} , a été acceptée. </br> 
-      Votre facture va vous être transmise par mail à : ${orderInfo.contact.email} . </br> 
-      Votre commande sera envoyée à l'adresse suivante : ${orderInfo.contact.firstName} ${orderInfo.contact.lastName}  </br> 
-      <span> ${orderInfo.contact.address} </span> </br> 
-      <span> ${orderInfo.contact.city} </span>
-
+      <p><strong> Chere client : </strong><span> ${orderInfo.contact.lastName + ' ' + orderInfo.contact.firstName} </span>, </br> 
+      <strong> Votre comande avec la référence :</strong> ${orderInfo.orderId} , a été acceptée. </br> 
+      <strong> Votre facture va vous être transmise par mail à :</strong> ${orderInfo.contact.email} . </br> 
+      <strong> Votre commande sera envoyée à l'adresse suivante :</strong> ${orderInfo.contact.firstName} ${orderInfo.contact.lastName}  </br> 
+      <strong> <span> ${orderInfo.contact.address} </span> </strong>
+      <strong><span> ${orderInfo.contact.city} </span></strong>
+       
       </p>
       `
     }else {
