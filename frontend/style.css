@@ -19,7 +19,7 @@ body {
   cursor: pointer;
 }
 
-header{
+header {
   display: flex;
   width: 100%;
 
@@ -44,7 +44,7 @@ li a {
   text-decoration: none;
   color: black;
 }
-footer{
+footer {
   display: flex;
   width: 100%;
   background-color: rgba(243, 233, 241, 255);
@@ -66,7 +66,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
- height: 20rem;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -102,15 +102,14 @@ footer{
 
 /* product */
 
-
 #productContainer {
   margin: 10px;
-  justify-content: space-around;
+
   align-items: center;
- 
+
   display: flex;
   overflow: hidden;
-   
+
   border: 5px solid rgb(223, 160, 160, 0.3);
 }
 .itemImage img {
@@ -120,9 +119,7 @@ footer{
   object-fit: cover;
 }
 .itemInfo {
- 
   padding: 10px;
- 
 }
 .itemDescription {
   display: flex;
@@ -131,7 +128,7 @@ footer{
   display: flex;
   justify-content: space-between;
 }
-.Description{
+.Description {
   display: flex;
   margin-top: 2rem;
   justify-content: space-between;
@@ -146,15 +143,15 @@ footer{
   justify-content: flex-end;
   margin-right: 10px;
   padding-left: 10px;
-    padding-right: 10px;
+  padding-right: 10px;
 }
 .addItemBtn {
   display: flex;
   align-items: center;
   padding: 10px;
   height: 50px;
- margin-left: 10px;
- margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: rgb(94, 196, 138);
   border-radius: 5px;
   border-style: none;
@@ -165,19 +162,19 @@ footer{
   transform: scale(1.05);
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
 }
-.returnToMainBtn{
+.returnToMainBtn {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 .returnToMain {
-display: flex;
-align-items: center;
-justify-content: flex-end;
-text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
 
   width: 150px;
   height: 50px;
@@ -191,19 +188,18 @@ text-decoration: none;
   transform: scale(1.05);
   cursor: pointer;
 }
-.deleteBtn{
+.deleteBtn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .clearItem {
-  
   display: none;
 }
-.product:hover  .clearItem{
+.product:hover .clearItem {
   display: inline;
- justify-self: center;
- align-items: center;
+  justify-self: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   background-color: rgb(206, 36, 36, 1.6);
@@ -222,8 +218,7 @@ text-decoration: none;
   display: flex;
   margin: 10px;
   justify-content: space-between;
-  flex-wrap:wrap ;
- 
+  flex-wrap: wrap;
 }
 /* .product:hover{
 opacity: 0.5;
@@ -234,45 +229,40 @@ opacity: 0.5;
   width: 100px;
 }
 
- .productInfo h3 {
-   display: flex;
-   justify-content: space-between;
-   margin-left: 5rem; 
-} 
+.productInfo h3 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5rem;
+}
 
-.sumTotal{
+.sumTotal {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
   font-size: 25px;
 }
- .changeQty{
+.changeQty {
   text-decoration: none;
   color: black;
 }
 
-.changeColor{
+.changeColor {
   text-decoration: none;
   color: black;
 }
-
-
-
 
 /* form styling */
 
 .formContainer {
- 
   display: flex;
- justify-content: center;
-
+  justify-content: center;
 }
- .form-control {
+.form-control {
   margin-bottom: 0.5rem;
   display: flex;
   width: 25rem;
-} 
-.formButton{
+}
+.formButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,8 +279,8 @@ opacity: 0.5;
   font-size: 18px;
   align-items: center;
 }
-.sendButton:hover{
-  transform: scale(1.05); 
+.sendButton:hover {
+  transform: scale(1.05);
 }
 @media (max-width: 1100px) {
   .card {
@@ -298,7 +288,7 @@ opacity: 0.5;
     width: 80%;
     display: flex;
     overflow: hidden;
- 
+
     border: 5px solid rgb(223, 160, 160, 0.3);
   }
   .card img {
@@ -308,20 +298,20 @@ opacity: 0.5;
     height: 40rem;
     object-fit: cover;
   }
-} 
+}
 @media (max-width: 750px) {
   #productContainer {
     margin: 10px;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     display: flex;
     overflow: hidden;
-     flex-direction: column; 
+    flex-direction: column;
     border: 5px solid rgb(223, 160, 160, 0.3);
   }
   .form-control {
     margin-bottom: 10px;
     display: flex;
     width: 15rem;
-  } 
+  }
 }
