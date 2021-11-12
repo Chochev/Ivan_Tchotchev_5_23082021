@@ -280,7 +280,10 @@ class View {
         return false;
       }
     };
-
+if(panier.length==0){
+    let infoPanier = document.getElementById("oursonPreview");
+infoPanier.innerHTML = `<h2>votre panier est vide</h2>`
+}
     const validEmail = function (inputEmail) {
       let testEmail = emailRegExp.test(inputEmail.value);
       //  console.log(testEmail);
@@ -298,18 +301,19 @@ class View {
     //submit btn
     form.addEventListener("submit", function (e) {
      // debugger;
-     console.log(panier)
+    // console.log(panier)
       e.preventDefault();
       if (
-        (validLastName(form.lastName) &&
+        (panier.length>0 &&
+          validLastName(form.lastName) &&
           validFirstName(form.firstName) &&
           validAddress(form.address) &&
           validCity(form.city) &&
-          validEmail(form.email)) ||
+          validEmail(form.email)) ===
           true
           
       ) { 
-       // console.log("form valid");
+        console.log("form valid");
         fetch("http://localhost:3000/api/teddies/order", {
           method: "POST",
           headers: {
@@ -337,6 +341,7 @@ class View {
           })
           .catch((erreur) => console.log("erreur : " + erreur));
       } 
+      
    
     });
     
